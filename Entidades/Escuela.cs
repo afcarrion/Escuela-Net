@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace EtapaUno.Entidades
 {
     public class Escuela
@@ -16,6 +17,8 @@ namespace EtapaUno.Entidades
         public TiposEscuela TipoEscuela{get;set;}
 
         public Curso[] Cursos{ get; set;}
+
+        public List<Curso> CursosList{get; set;}
 
         /*public Escuela(string nombre, int anoFundacion){
             this.nombre = nombre;

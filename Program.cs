@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using EtapaUno.Entidades;
 using static System.Console;
 
@@ -45,13 +46,57 @@ namespace EtapaUno
             imprimirCursosForEach(arregloCursos);*/
 
             imprimirCursosEscuela(miEscuela.Cursos);
+
+            var listaCursos = new List<Curso>(){
+                new Curso(){ Nombre = "102", Jornada= TiposJornada.Mañana},
+                new Curso(){ Nombre = "202", Jornada= TiposJornada.Mañana},
+                new Curso(){ Nombre = "302", Jornada= TiposJornada.Mañana}
+            };
+
+            var otraListaCursos = new List<Curso>(){
+                new Curso(){ Nombre = "402", Jornada= TiposJornada.Mañana},
+                new Curso(){ Nombre = "502", Jornada= TiposJornada.Mañana},
+                new Curso(){ Nombre = "103", Jornada= TiposJornada.Tarde}
+            };
+
+            /*Remover objetos de una coleccion*/
+            //otraListaCursos.Clear();
+            miEscuela.CursosList = listaCursos;
+
+            miEscuela.CursosList.Add(new Curso{Nombre="103", Jornada= TiposJornada.Tarde });
+            miEscuela.CursosList.Add(new Curso{Nombre="203", Jornada= TiposJornada.Tarde });
+
+            miEscuela.CursosList.AddRange(otraListaCursos);
+
+            Curso tmp = new Entidades.Curso(){Nombre = "101-vacacional", Jornada = TiposJornada.Noche};
+            miEscuela.CursosList.Add(tmp);
+            /*Remover algunos elementos*/
+            imprimirSegundosCursos(miEscuela);
+            miEscuela.CursosList.Remove(tmp);
+            imprimirSegundosCursos(miEscuela);
+
+            /*Remover con predicado*/
+            Predicate<Curso> miAlgoritmo = Predicado;
+            miEscuela.CursosList.RemoveAll(miAlgoritmo);
+            imprimirSegundosCursos(miEscuela);
         }
 
+        private static bool Predicado(Curso cur)
+        {
+            return cur.Nombre == "402";
+        }
+
+        private static void imprimirSegundosCursos(Escuela miEscuela){
+            WriteLine("====== Lista de segundos cursos de la escuela ======");
+            foreach (var curso in miEscuela.CursosList)
+            {
+                Console.WriteLine($"Nombre: {curso.Nombre}");
+            }
+        }
         private static void imprimirCursosEscuela(Curso[] cursos){
             WriteLine("====== Lista de cursos de la escuela ======");
             foreach (var curso in cursos)
             {
-                
                 Console.WriteLine($"Nombre: {curso.Nombre}");
             }
         }
