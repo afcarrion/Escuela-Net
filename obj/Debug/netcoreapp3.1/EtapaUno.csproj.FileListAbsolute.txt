@@ -1,0 +1,11 @@
+/Users/freehyoga/Documents/Platzi/Net/EtapaUno/bin/Debug/netcoreapp3.1/EtapaUno
+/Users/freehyoga/Documents/Platzi/Net/EtapaUno/bin/Debug/netcoreapp3.1/EtapaUno.deps.json
+/Users/freehyoga/Documents/Platzi/Net/EtapaUno/bin/Debug/netcoreapp3.1/EtapaUno.runtimeconfig.json
+/Users/freehyoga/Documents/Platzi/Net/EtapaUno/bin/Debug/netcoreapp3.1/EtapaUno.runtimeconfig.dev.json
+/Users/freehyoga/Documents/Platzi/Net/EtapaUno/bin/Debug/netcoreapp3.1/EtapaUno.dll
+/Users/freehyoga/Documents/Platzi/Net/EtapaUno/bin/Debug/netcoreapp3.1/EtapaUno.pdb
+/Users/freehyoga/Documents/Platzi/Net/EtapaUno/obj/Debug/netcoreapp3.1/EtapaUno.csprojAssemblyReference.cache
+/Users/freehyoga/Documents/Platzi/Net/EtapaUno/obj/Debug/netcoreapp3.1/EtapaUno.AssemblyInfoInputs.cache
+/Users/freehyoga/Documents/Platzi/Net/EtapaUno/obj/Debug/netcoreapp3.1/EtapaUno.AssemblyInfo.cs
+/Users/freehyoga/Documents/Platzi/Net/EtapaUno/obj/Debug/netcoreapp3.1/EtapaUno.dll
+/Users/freehyoga/Documents/Platzi/Net/EtapaUno/obj/Debug/netcoreapp3.1/EtapaUno.pdb
