@@ -22,6 +22,7 @@ namespace CoreEscuela
 
         private void CargarEvaluaciones()
         {
+            var lista = new List<Evaluacion>();
             foreach (var curso in Escuela.CursosList)
             {
                 foreach (var asignatura in curso.Asignaturas)
@@ -37,7 +38,7 @@ namespace CoreEscuela
                                 Nota = (float)(5 * rnd.NextDouble()),
                                 Alumno = alumno
                             };
-                            alumno.Evaluacion.Add(ev);
+                            alumno.Evaluaciones.Add(ev);
                         }
                     }
                 }
