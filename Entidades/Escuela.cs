@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-namespace EtapaUno.Entidades
+namespace CoreEscuela.Entidades
 {
     public class Escuela
     {
