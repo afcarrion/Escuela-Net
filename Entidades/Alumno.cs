@@ -4,7 +4,7 @@ namespace CoreEscuela.Entidades
     {
         public string UniqueId {get; private set;}
 
-        public string Name {get; set;}
+        public string Nombre {get; set;}
 
         public Alumno()=> UniqueId = System.Guid.NewGuid().ToString();
     }
