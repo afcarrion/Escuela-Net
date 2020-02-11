@@ -14,6 +14,7 @@ namespace CoreEscuela
          engine.Inicializar();  
          Printer.WriteTitle("Bienvenidos a la Escuela"); 
          ImprimirCursosEscuela(engine.Escuela);
+
         }
 
         private static void ImprimirCursosEscuela(Escuela escuela)
@@ -24,7 +25,7 @@ namespace CoreEscuela
             {
                 foreach (var curso in escuela.CursosList)
                 {
-                    WriteLine($"Nombre {curso.Nombre}, Id {curso.UniqueID}");
+                    WriteLine($"Nombre {curso.Nombre}, Id {curso.UniqueId}");
                 }
             }
         }
