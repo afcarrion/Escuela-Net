@@ -9,5 +9,9 @@ namespace CoreEscuela.Entidades
             UniqueId = System.Guid.NewGuid().ToString();
         }
 
+        public override string ToString(){
+            return $"{Nombre}, {UniqueId}";
+        }
+
     }
 }

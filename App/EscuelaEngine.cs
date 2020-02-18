@@ -44,7 +44,19 @@ namespace CoreEscuela
                 }
             }
         }
-
+        public List<ObjetoEscuelaBase> GetObjetoEscuela(){
+            var listaObj = new List<ObjetoEscuelaBase>();
+            listaObj.Add(Escuela);
+            listaObj.AddRange(Escuela.CursosList);
+            foreach(var curso in Escuela.CursosList){
+                listaObj.AddRange(curso.Asignaturas);
+                listaObj.AddRange(curso.Alumnos);
+                foreach(var alumno in curso.Alumnos){
+                    listaObj.AddRange(alumno.Evaluaciones);
+                }
+            }
+            return listaObj;
+        }
         private void CargarAsignaturas()
         {
             foreach (var curso in Escuela.CursosList)
@@ -88,5 +100,7 @@ namespace CoreEscuela
                 curso.Alumnos = GenerarAlumnosRandom(cantidadRandom);
             }
         }
+
+
     }
 }
